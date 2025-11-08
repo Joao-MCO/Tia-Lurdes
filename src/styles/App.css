@@ -7,10 +7,18 @@
   text-align: center;
 }
 
+main{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #logo {
     aspect-ratio: 16/9;
     object-fit: contain;
-    height: 8rem;
+    height: var(--app-logo-height, 8rem);
 }
 
 header {
@@ -19,6 +27,32 @@ header {
   align-items: center;
   gap: 1rem;
 }
+
+footer {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#footer-description {
+  display: flex;
+  margin-top: auto;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  width: 90vw;
+  align-content: space-between;
+}
+
+#footer-description p{
+  width: 25%;
+  text-align: center;
+  margin: 0;
+}
+
+
 
 /* CSS variables for app layout */
 :root {
