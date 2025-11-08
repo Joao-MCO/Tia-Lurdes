@@ -3,7 +3,7 @@ import '../styles/AboutUs.css'
 
 function AboutUs() {
   return (
-    <div>
+    <main>
         <div id="about-us-header">
             <h1>MASSAS TIA LURDES</h1>
             <p>O PASTEL COM SABOR DE AMOR</p>
@@ -20,7 +20,7 @@ function AboutUs() {
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3onk04tQXgP4YS0m96jBTE0vT5Kf5dBfHdQ&s" alt="Imagem 3" />
             <p>A Massas Tia Lurdes é uma empresa familiar dedicada à produção de pastéis artesanais desde 1985. Nossa missão é oferecer produtos de alta qualidade, feitos com ingredientes frescos e selecionados, garantindo o sabor caseiro que nossos clientes adoram. Com uma variedade de recheios tradicionais e inovadores, nossos pastéis são preparados com carinho e atenção aos detalhes. Valorizamos a tradição culinária brasileira, ao mesmo tempo em que buscamos inovar para atender às preferências dos nossos clientes. Na Massas Tia Lurdes, acreditamos que cada pastel conta uma história de dedicação, sabor e amor pela gastronomia. Venha nos visitar e experimente o verdadeiro sabor do pastel artesanal!</p>
         </div>
-    </div>
+    </main>
   )
 }
 

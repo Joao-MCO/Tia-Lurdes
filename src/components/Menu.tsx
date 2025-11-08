@@ -1,14 +1,15 @@
 import React from 'react'
 import '../styles/Menu.css'
+import { Link } from 'react-router-dom'
 
 function Menu() {
   return (
     <div className="menu">
         <ul>
-            <li>Sobre Nós</li>
-            <li>Nossos Produtos</li>
-            <li>Entre em Contato</li>
-            <li>Trabalhe Conosco</li>
+            <li><Link to="/about">Sobre Nós</Link></li>
+            <li><Link to="/products">Nossos Produtos</Link></li>
+            <li><Link to="/contact">Entre em Contato</Link></li>
+            <li><Link to="/jobs">Trabalhe Conosco</Link></li>
         </ul>
     </div>
   )
