@@ -8,6 +8,7 @@ function Menu() {
             <li>Sobre Nós</li>
             <li>Nossos Produtos</li>
             <li>Entre em Contato</li>
+            <li>Trabalhe Conosco</li>
         </ul>
     </div>
   )

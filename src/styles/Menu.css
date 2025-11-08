@@ -1,24 +1,106 @@
 .menu{
-    display: flex; 
+    display: flex;
     width: 100%;
-    background-color: red;
+    background-color: var(--menu-bg, #e63946);
+    align-items: center;
+    justify-content: center;
 }
 
-ul{
+.menu ul{
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     width: 100%;
     align-content: space-between;
+    gap: var(--menu-gap, 0.5rem);
+    padding: 0;
 }
 
-li{
-    width: 33%;
+.menu li{
+    flex: 1 1 auto;
     text-align: center;
     list-style: none;
-    font-size: 1.5rem;
+    font-size: var(--menu-font-size, 1.5rem);
     font-weight: bold;
     color: white;
     cursor: pointer;
+    padding: 0.75rem 0.5rem;
 }
 
+@media (max-width: 768px) {
+    .menu ul {
+        gap: 0.4rem;
+    }
+    .menu li {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu {
+        padding: 0.5rem 0.75rem;
+    }
+    .menu ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu li{
+        width: 100%;
+        padding: 0.85rem 0.5rem;
+        font-size: 1.05rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .menu li{
+        font-size: 1rem;
+        padding: 0.7rem 0.4rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .menu li{
+        font-size: 0.98rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .menu li{
+        font-size: 0.92rem;
+        padding: 0.55rem 0.35rem;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 600px) {
+    .menu ul{
+        flex-direction: row;
+    }
+    .menu li{
+        width: auto;
+        flex: 1 1 0;
+    }
+}
+
+.menu--stacked .menu ul,
+.menu--stacked ul{
+    flex-direction: column !important;
+}
+
+.menu--compact .menu li,
+.menu--compact li{
+    padding: 0.4rem 0.3rem !important;
+    font-size: 0.95rem !important;
+}
+
+.menu--large-text .menu li,
+.menu--large-text li{
+    font-size: 1.8rem !important;
+    padding: 1rem 0.5rem !important;
+}
+
+.menu li:focus,
+.menu li:hover{
+    outline: none;
+    opacity: 0.92;
+}
