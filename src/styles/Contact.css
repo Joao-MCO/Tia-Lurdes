@@ -1,0 +1,158 @@
+:root {
+    --form-gap: 1rem;
+    --input-padding: 0.75rem;
+    --border-radius: 0.5rem;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-us-title {
+    width: 100%;
+    max-width: 900px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2rem;
+}
+
+.contact-us-form {
+    width: 100%;
+    max-width: 900px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: ghostwhite;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    padding: 3rem;
+}
+
+.contact-us-title h3{
+    margin: 0;
+}
+
+.contact-us-title p{
+    margin: 0;
+}
+
+.contact-us-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--form-gap);
+    width: 100%;
+}
+
+.contact-us-form .field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-form select{
+    width: 100%;
+    padding: var(--input-padding);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.contact-us-form .field-group:last-of-type,
+.contact-us-form button {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.contact-us-form .field-group:last-of-type textarea {
+    width: 100%;
+}
+
+.contact-us-form .field-name {
+    grid-area: name;
+}
+
+.contact-us-form .field-email {
+    grid-area: email;
+}
+
+.contact-us-form .field-subject {
+    grid-area: subject;
+}
+
+.contact-us-form .field-message {
+    grid-area: message;
+}
+
+.contact-us-form .field-submit {
+    grid-area: submit;
+    justify-self: center;
+    width: 100%;
+    max-width: 200px;
+}
+
+.contact-us-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.contact-us-form input,
+.contact-us-form textarea {
+    width: 100%;
+    padding: var(--input-padding);
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.contact-us-form input:focus,
+.contact-us-form textarea:focus {
+    border-color: #4CAF50;
+}
+
+.contact-us-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-us-form button {
+    padding: var(--input-padding);
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: #e63946;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.contact-us-form button:hover {
+    background-color: #940000;
+}
+
+@media (max-width: 480px) {
+    .contact-us-form {
+        grid-template-areas: 
+            "name"
+            "email"
+            "subject"
+            "message"
+            "submit";
+        grid-template-columns: 1fr;
+        gap: calc(var(--form-gap) * 0.75);
+        padding: 0.75rem;
+    }
+
+    .contact-us-form .field-submit {
+        max-width: none;
+    }
+}

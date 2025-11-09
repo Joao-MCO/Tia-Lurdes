@@ -4,6 +4,7 @@ import Menu from './components/Menu'
 import Home from './components/Home'
 import './styles/App.css'
 import Products from './components/Products'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/contact" element={<p>Entre em Contato</p>} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/jobs" element={<p>Trabalhe Conosco</p>} />
       </Routes>
       <footer>
