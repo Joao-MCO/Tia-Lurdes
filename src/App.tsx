@@ -3,6 +3,7 @@ import AboutUs from './components/AboutUs'
 import Menu from './components/Menu'
 import Home from './components/Home'
 import './styles/App.css'
+import Products from './components/Products'
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
-        <Route path="/products" element={<p>Produtos</p>} />
+        <Route path="/products" element={<Products />} />
         <Route path="/contact" element={<p>Entre em Contato</p>} />
         <Route path="/jobs" element={<p>Trabalhe Conosco</p>} />
       </Routes>

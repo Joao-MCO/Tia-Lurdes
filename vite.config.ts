@@ -11,8 +11,15 @@ export default defineConfig({
     }),
   ],
   server: {
-    watch: {
-      usePolling: true
+    watch: { usePolling: true },
+    proxy: {
+      // proxy /api/products -> https://tia-lurdes.vercel.app/api/products
+      '/api': {
+        target: 'https://tia-lurdes.vercel.app',
+        changeOrigin: true,
+        secure: true,
+        rewrite: (path) => path.replace(/^\/api/, '/api')
+      }
     }
   }
 })
