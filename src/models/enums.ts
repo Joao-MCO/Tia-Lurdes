@@ -18,3 +18,16 @@ export const Role = {
     CLIENTE: "Cliente",
 } as const;
 export type Role = (typeof Role)[keyof typeof Role];
+
+export const ContactType = {
+    PARCERIA:"Parceria",
+    COMPRA:"Compra",
+    OUTROS:"Outros"
+} as const;
+export type ContactType = (typeof ContactType)[keyof typeof ContactType];
+
+export const DocType ={
+    CPF:"CPF",
+    CNPJ:"CNPJ"
+} as const;
+export type DocType = (typeof DocType)[keyof typeof DocType];

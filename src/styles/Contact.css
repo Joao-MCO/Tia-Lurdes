@@ -4,11 +4,21 @@
     --border-radius: 0.5rem;
 }
 
-.contact-container {
+main {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem 1rem;
+}
+
+.contact-container {
     width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-us-title {
@@ -16,20 +26,17 @@
     max-width: 900px;
     font-size: 1.2rem;
     text-align: center;
-    margin: 2rem;
+    margin-bottom: 2rem;
 }
 
 .contact-us-form {
     width: 100%;
     max-width: 900px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: ghostwhite;
     border: 1px solid #ccc;
     border-radius: var(--border-radius);
     padding: 3rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .contact-us-title h3{
